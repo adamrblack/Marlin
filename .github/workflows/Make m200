@@ -28,7 +28,7 @@ jobs:
     - name: Build Marlin
       shell: bash
       run: |
-        FQBN="STM32:stm32:3dprinter:pnum=malyan_M200v2,upload_method=swdMethod,xserial=generic,usb=CDC,xusb=FS,opt=oslto,rtlib=nanofp"
+        FQBN="STM32:stm32:3dprinter:pnum=malyanm200_f070cb,upload_method=swdMethod,xserial=generic,usb=CDC,xusb=FS,opt=oslto,rtlib=nanofp"
         arduino-cli compile --build-path /tmp/build --verbose --fqbn=$FQBN ./Marlin/Marlin.ino
         mkdir firmware && touch firmware/fcupdate.flg
         mv /tmp/build/Marlin.ino.bin firmware/firmware.bin
