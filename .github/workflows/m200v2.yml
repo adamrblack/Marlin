@@ -2,7 +2,7 @@ name: Build Marlin for Malyan M200
 
 on:
   push:
-    branches: [ malyan-m200* ]
+    branches: [ malyan-m200_autobuild ]
 
 jobs:
   build:
